@@ -48,6 +48,7 @@ function init() {
 
 function createFacade(type,selectedMenu){
     if(selectedMenu!=type){
+        selectedMenu = type;
         document.getElementById("selected").innerHTML = "Selected : "+type;
         while(scene.children.length > 0){ scene.remove(scene.children[0]); }
         var width = 600, height = 800, depth = 40;
