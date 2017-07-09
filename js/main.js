@@ -1,5 +1,6 @@
 var container;
 var camera, scene,controls, renderer, mesh;
+var selectedMenu = "default";
 
 init();
 animate();
@@ -49,7 +50,7 @@ function init() {
 function createFacade(type,selectedMenu){
     if(selectedMenu!=type){
         selectedMenu = type;
-        document.getElementById("selected").innerHTML = "Selected : "+type;
+        document.getElementById("selected").innerHTML = "Selected : "+selectedMenu;
         while(scene.children.length > 0){ scene.remove(scene.children[0]); }
         var width = 600, height = 800, depth = 40;
         var facadeMesh = new THREE.Mesh(new THREE.BoxGeometry(width, height, depth,30,30));
@@ -297,7 +298,6 @@ function createFacade(type,selectedMenu){
     }
 }
 
-var selectedMenu = "default";
 var myLi = document.getElementsByTagName('li');
 for (var i = 0; i < myLi.length; i++) {
     myLi[i].addEventListener('click', function(){
