@@ -288,9 +288,10 @@ function createFacade(type,selectedMenu){
             ;
         }
 
-        var loader = new THREE.TextureLoader();
-        var texture = loader.load("img/texture.jpg");
-        result.material = new THREE.MeshPhongMaterial({map: texture});
+        //var loader = new THREE.TextureLoader();
+        //var texture = loader.load("img/texture.jpg");
+        //result.material = new THREE.MeshPhongMaterial({map: texture});
+        result.material = new THREE.MeshNormalMaterial();
         scene.add( result );
     }
 }
