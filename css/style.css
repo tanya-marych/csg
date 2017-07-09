@@ -1,0 +1,46 @@
+body{
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+#top{
+    margin: 0 auto;
+    padding:0;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.main-menu{
+    margin: 0 auto;
+    padding:0;
+    display: inline-table;
+}
+
+.main-menu>li{
+    display: inline-block;
+    color: white;
+    border: 1px solid white;
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.main-menu>li:hover{
+    text-decoration: underline;
+}
+
+.main-menu>li:active{
+    text-decoration: underline;
+}
+
+#selected{
+    text-align: center;
+    color: white;
+}
+
+#root>canvas{
+    display: block;
+}

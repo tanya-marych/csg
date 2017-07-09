@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Constructive Solid Geometry</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div id="top">
+            <ul class="main-menu">
+                <li onclick="createFacade(this.innerHTML.toLowerCase())">Default</li>
+                <li onclick="createFacade(this.innerHTML.toLowerCase())">Corners</li>
+                <li onclick="createFacade(this.innerHTML.toLowerCase())">Frame</li>
+                <li onclick="createFacade(this.innerHTML.toLowerCase())">Frame with lines</li>
+                <li onclick="createFacade(this.innerHTML.toLowerCase())">Greece</li>
+                <li onclick="createFacade(this.innerHTML.toLowerCase())">Grid</li>
+                <li onclick="createFacade(this.innerHTML.toLowerCase())">Lines</li>
+            </ul>
+            <h2 id="selected"></h2>
+        </div>
+        <div id="root"></div>
+    </body>
+    <script src="js/lib/csg.js"></script>
+    <script src="js/lib/ThreeCSG.js"></script>
+    <script src="js/lib/three.min.js"></script>
+    <script src="js/controls/TrackballControls.js"></script>
+    <script src="js/main.js"></script>
+</html>
