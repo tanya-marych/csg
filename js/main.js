@@ -1,6 +1,6 @@
 var container;
 var camera, scene,controls, renderer, mesh;
-var selectedMenu = "default";
+var selectedMenu;
 
 init();
 animate();
@@ -47,9 +47,13 @@ function init() {
     container.appendChild( renderer.domElement );
 }
 
-function createFacade(type,selectedMenu){
+function createFacade(type){
+    console.log("blablabla= ", selectedMenu!=type);
+    console.log("type ", type);
+    console.log("selectedMenu ", selectedMenu);
     if(selectedMenu!=type){
         selectedMenu = type;
+        console.log("selectedMenu 2 ", selectedMenu);
         document.getElementById("selected").innerHTML = "Selected : "+selectedMenu;
         while(scene.children.length > 0){ scene.remove(scene.children[0]); }
         var width = 600, height = 800, depth = 40;
@@ -302,6 +306,6 @@ var myLi = document.getElementsByTagName('li');
 for (var i = 0; i < myLi.length; i++) {
     myLi[i].addEventListener('click', function(){
         var type = this.innerHTML.toLowerCase();
-        createFacade(type,selectedMenu);
+        createFacade(type);
     }, false);
 }
